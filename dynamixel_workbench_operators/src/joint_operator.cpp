@@ -71,15 +71,19 @@ bool JointOperator::getTrajectoryInfo(const std::string yaml_file, trajectory_ms
     YAML::Node motion_name = motion[name];
     for (uint8_t size = 0; size < joint_size; size++)
     {
-      if (joint_size != motion_name["step"].size())
+      if (joint_size != motion_name["positions"].size() || joint_size != motion_name["velocities"].size() || joint_size != motion_name["accelerations"].size())
       {
         ROS_ERROR("Please check motion step size. It must be equal to joint size");
         return 0;
       }
 
-      jnt_tra_point.positions.push_back(motion_name["step"][size].as<double>());
+      jnt_tra_point.positions.push_back(motion_name["positions"][size].as<double>());
+      jnt_tra_point.positions.push_back(motion_name["velocities"][size].as<double>());
+      jnt_tra_point.positions.push_back(motion_name["accelerations"][size].as<double>());
 
-      ROS_INFO("motion_name : %s, step : %f", name.c_str(), motion_name["step"][size].as<double>());
+      ROS_INFO("motion_name : %s, positions : %f", name.c_str(), motion_name["positions"][size].as<double>());
+      ROS_INFO("motion_name : %s, velocities : %f", name.c_str(), motion_name["velocities"][size].as<double>());
+      ROS_INFO("motion_name : %s, accelerations : %f", name.c_str(), motion_name["accelerations"][size].as<double>());
     }
 
     if (motion_name["time_from_start"] == NULL)
