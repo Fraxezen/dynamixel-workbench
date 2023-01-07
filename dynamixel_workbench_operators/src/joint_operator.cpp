@@ -33,7 +33,7 @@ JointOperator::JointOperator()
     exit(0);
   }
 
-  joint_trajectory_pub_ = node_handle_.advertise<trajectory_msgs::JointTrajectory>("joint_trajectory", 100);
+  joint_trajectory_pub_ = node_handle_.advertise<trajectory_msgs::JointTrajectory>("joint_trajectory", 100000000);
   move_command_server_ = node_handle_.advertiseService("execution", &JointOperator::moveCommandMsgCallback, this);
 
   is_loop_ = priv_node_handle_.param<bool>("is_loop", "false");
@@ -78,23 +78,23 @@ bool JointOperator::getTrajectoryInfo(const std::string yaml_file, trajectory_ms
       }
 
       jnt_tra_point.positions.push_back(motion_name["positions"][size].as<double>());
-      jnt_tra_point.velocities.push_back(motion_name["velocities"][size].as<double>());
-      jnt_tra_point.accelerations.push_back(motion_name["accelerations"][size].as<double>());
+      // jnt_tra_point.velocities.push_back(motion_name["velocities"][size].as<double>());
+      // jnt_tra_point.accelerations.push_back(motion_name["accelerations"][size].as<double>());
 
       ROS_INFO("motion_name : %s, positions : %f", name.c_str(), motion_name["positions"][size].as<double>());
-      ROS_INFO("motion_name : %s, velocities : %f", name.c_str(), motion_name["velocities"][size].as<double>());
-      ROS_INFO("motion_name : %s, accelerations : %f", name.c_str(), motion_name["accelerations"][size].as<double>());
+      // ROS_INFO("motion_name : %s, velocities : %f", name.c_str(), motion_name["velocities"][size].as<double>());
+      // ROS_INFO("motion_name : %s, accelerations : %f", name.c_str(), motion_name["accelerations"][size].as<double>());
     }
 
-    if (motion_name["time_from_start"] == NULL)
-    {
-      ROS_ERROR("Please check time_from_start. It must be set time_from_start each step");
-      return 0;
-    }
+    // if (motion_name["time_from_start"] == NULL)
+    // {
+    //   ROS_ERROR("Please check time_from_start. It must be set time_from_start each step");
+    //   return 0;
+    // }
 
-    jnt_tra_point.time_from_start.fromSec(motion_name["time_from_start"].as<double>());
+    // jnt_tra_point.time_from_start.fromSec(motion_name["time_from_start"].as<double>());
 
-    ROS_INFO("time_from_start : %f", motion_name["time_from_start"].as<double>());
+    // ROS_INFO("time_from_start : %f", motion_name["time_from_start"].as<double>());
 
     jnt_tra_msg->points.push_back(jnt_tra_point);
   }
