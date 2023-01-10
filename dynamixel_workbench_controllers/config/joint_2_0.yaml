@@ -8,84 +8,84 @@ Joint1:
   Homing_Offset : 0
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint2:
   ID: 2
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint3:
   ID: 3
   Homing_Offset: 0
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint4:
   ID: 4
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint5:
   ID: 5
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint6:
   ID: 6
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint7:
   ID: 7
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint8:
   ID: 8
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint9:
   ID: 9
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint10:
   ID: 10
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint11:
   ID: 11
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint12:
   ID: 12
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint13:
   ID: 13
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
 Joint14:
   ID: 14
   Return_Delay_Time: 0
   Operating_Mode: 3
-  Profile_Acceleration: 50
-  Profile_Velocity: 65
+  Profile_Acceleration: 300
+  Profile_Velocity: 800
